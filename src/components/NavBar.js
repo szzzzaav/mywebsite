@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from "../assets/img/logo.svg";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
-import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
 
 export const NavBar = () => {
@@ -43,7 +38,12 @@ export const NavBar = () => {
                 className={
                   activeLink === "home" ? "active navbar-link" : "navbar-link"
                 }
-                onClick={() => onUpdateActiveLink("home")}
+                onClick={() => {
+                  document
+                    .getElementById("home")
+                    .scrollIntoView({ behavior: "smooth" });
+                  onUpdateActiveLink("home");
+                }}
               >
                 Home
               </Nav.Link>
@@ -52,7 +52,12 @@ export const NavBar = () => {
                 className={
                   activeLink === "skills" ? "active navbar-link" : "navbar-link"
                 }
-                onClick={() => onUpdateActiveLink("skills")}
+                onClick={() => {
+                  document
+                    .getElementById("skills")
+                    .scrollIntoView({ behavior: "smooth" });
+                  onUpdateActiveLink("skills");
+                }}
               >
                 Skills
               </Nav.Link>
@@ -63,7 +68,12 @@ export const NavBar = () => {
                     ? "active navbar-link"
                     : "navbar-link"
                 }
-                onClick={() => onUpdateActiveLink("projects")}
+                onClick={() => {
+                  document
+                    .getElementById("projects")
+                    .scrollIntoView({ behavior: "smooth" });
+                  onUpdateActiveLink("projects");
+                }}
               >
                 Projects
               </Nav.Link>
