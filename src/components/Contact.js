@@ -93,6 +93,19 @@ export const Contact = () => {
                         </button>
                       </Col>
                     </Row>
+                    <Row>
+                      <Col size={12} className="px-1">
+                        <button
+                          onClick={() =>
+                            window.open(
+                              "https://www.acwing.com/user/myspace/solution/index/157593/"
+                            )
+                          }
+                        >
+                          <span>{"算法题解"}</span>
+                        </button>
+                      </Col>
+                    </Row>
                   </form>
                 </div>
               )}
